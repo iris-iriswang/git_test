@@ -1,0 +1,16 @@
+merge_fatal_1.png
+    開branch，checkout 回 master，提交一個commit(add third.txt)。
+    checkout 到 dev/branch_a，提交一個commit(first commit of the branch_a)。
+    checkout 回 master,使用git merge -m "this is first merge, --ff" dev/branch_a。
+    合併產生新的commit。
+    push。X
+merge_fatal_2.png
+    使用reset指回(add third.txt)的commit。
+merge_fatal_3.png
+    使用git merge --no-ff -m "this is first merge, --ff" dev/branch_a。
+    合併產生新的commit。
+    push --> 失敗 --> pull
+merge_fatal_4.png
+    pull 之後 log --graph。
+
+#這個版本庫被我搞亂了XD，邏輯錯誤示範。
